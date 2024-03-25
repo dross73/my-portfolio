@@ -101,6 +101,6 @@
         }
       }
     }
-  },
-  "defaultProject": "my-portfolio"
+  }
+  // "defaultProject": "my-portfolio"
 }

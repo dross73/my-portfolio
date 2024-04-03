@@ -1,10 +1,21 @@
 // Importing the necessary modules.
 const express = require('express'); // Express framework for creating the server
+
+const projectRoutes = require('./routes/projects-routes');
+
+
+const userRoutes = require('./routes/users-routes');
+
+
 const { MongoClient } = require('mongodb'); // MongoDB client for database operations
 require('dotenv').config(); // Dotenv for loading environment variables from .env file
 
 // Create an instance of express which will be our server
 const app = express();
+
+
+app.use('/api/projects', projectRoutes);
+app.use('/api/users', userRoutes);
 
 // Define the port number as specified in environment variables or default to 3000
 const port = process.env.PORT || 3000;

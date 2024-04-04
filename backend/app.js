@@ -3,7 +3,6 @@ const express = require('express'); // Express framework for creating the server
 
 const projectRoutes = require('./routes/projects-routes');
 
-
 const userRoutes = require('./routes/users-routes');
 
 

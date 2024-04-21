@@ -1,12 +1,18 @@
 const express = require('express');
+const bcrypt = require('bcrypt');
 const User = require('../models/user-model'); // Assuming you have a User model defined
 
 const router = express.Router();
 
 // Register a new user
 router.post('/register', async (req, res) => {
-  // Placeholder logic for user registration
-  res.send('Register endpoint hit, user registration logic to be implemented.');
+  try {
+  //Hash the password
+
+
+  } catch (err) {
+
+  }
 });
 
 // Login a user

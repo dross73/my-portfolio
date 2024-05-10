@@ -14,10 +14,6 @@ const userSchema = new mongoose.Schema({
   passwordHash: {
     type: String,
     required: true
-  },
-  roles: {
-    type: [String],
-    required: true
   }
 });
 

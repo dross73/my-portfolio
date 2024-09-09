@@ -12,7 +12,10 @@
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.1.1",
+<<<<<<< HEAD
     "cors": "^2.8.5",
+=======
+>>>>>>> 6552228a949e0c6ff14da5f668d9db88a5323c69
     "express-session": "^1.18.0",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.2.4"

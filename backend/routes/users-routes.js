@@ -74,7 +74,6 @@ router.post("/register", async (req, res) => {
 Login a user
 
 */
-<<<<<<< HEAD
 //login a user
 router.post("/login", async (req, res) => {
   const { username, password } = req.body;
@@ -102,8 +101,6 @@ router.post("/login", async (req, res) => {
     res.status(500).json({ success: false, message: err.message });
   }
 });
-=======
->>>>>>> 6552228a949e0c6ff14da5f668d9db88a5323c69
 
 
 
@@ -113,7 +110,6 @@ Get user profile
 
 
 */
-<<<<<<< HEAD
 //Get user profile
 router.get("/:id", async (req, res) => {
   try {
@@ -130,10 +126,6 @@ router.get("/:id", async (req, res) => {
     res.status(500).json({ message: err.message });
   }
 });
-=======
-
-
->>>>>>> 6552228a949e0c6ff14da5f668d9db88a5323c69
 
 /*
 
@@ -141,7 +133,6 @@ Update user profile
 
 
 */
-<<<<<<< HEAD
 //Update user profile
 router.put("/:id", async (req, res) => {
   //Destructure required fields from the request body
@@ -184,10 +175,6 @@ router.put("/:id", async (req, res) => {
     res.status(500).json({ message: err.message });
   }
 });
-=======
-
-
->>>>>>> 6552228a949e0c6ff14da5f668d9db88a5323c69
 
 /*
 
@@ -196,7 +183,6 @@ Delete a User
 
 
 */
-<<<<<<< HEAD
 // Delete a user
 router.delete("/:id", async (req, res) => {
   try {
@@ -215,16 +201,6 @@ router.delete("/:id", async (req, res) => {
     res.status(500).json({ message: err.message });
   }
 });
-=======
-
-
-
-
-
-
-
-
->>>>>>> 6552228a949e0c6ff14da5f668d9db88a5323c69
 
 
 module.exports = router;

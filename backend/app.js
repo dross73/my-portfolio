@@ -3,6 +3,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 require("dotenv").config();
 const session = require("express-session");
+const cors = require('cors');
 
 // Route handlers
 const projectRoutes = require("./routes/projects-routes");
@@ -14,9 +15,12 @@ const app = express();
 // Middleware to parse JSON requests
 app.use(express.json());
 
+// Enable CORS for all routes and origins
+app.use(cors());
+
 // Using routes
 app.use("/api/projects", projectRoutes);
-app.use("/api/users", userRoutes);
+app.use("/api/users", userRoutes);  // This route handles user registration, login, etc.
 
 // MongoDB URI from .env file
 const uri = process.env.MONGO_URI;
@@ -27,7 +31,7 @@ mongoose
   .then(() => console.log("Connected to MongoDB"))
   .catch((err) => console.error("Could not connect to MongoDB", err));
 
-//SESSIONS
+// SESSIONS
 app.use(
   session({
     secret: process.env.SESSION_SECRET,
